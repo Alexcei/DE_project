@@ -1,11 +1,87 @@
-Error2021-06-10 02:38:30.192429 : table cards already exists
-Error 2021-06-10 02:38:54.864016 : table cards already exists
-Error 2021-06-10 02:39:02.420750 : table cards already exists
-Error 2021-06-10 02:47:22.015287 : table cards already exists
-2021-06-10 02:47:22.028902 : Loading source files into staging tables
-2021-06-10 02:52:05.136022 : -------------Start of work----------------
-Error 2021-06-10 02:52:05.204845 : table cards already exists
-2021-06-10 02:52:05.205090 : Loading source files into staging tables
-2021-06-10 02:55:57.629720 : -------------Start of work----------------
-Error 2021-06-10 02:55:57.666105 : table cards already exists
-2021-06-10 02:55:57.666259 : Loading source files into staging tables
+2021-06-10 04:01:15.864585 : -------------Start of work----------------
+2021-06-10 04:01:16.570108 : Loading source files into staging tables
+2021-06-10 04:01:17.626277 : creating fact tables
+2021-06-10 04:01:17.626377 : creating dimension tables
+2021-06-10 04:01:17.626738 : Creat Report
+2021-06-10 04:01:17.627069 : dropping temporary tables
+2021-06-10 04:01:17.628276 : -------------Work completed----------------
+2021-06-10 04:01:29.218197 : -------------Start of work----------------
+Error 2021-06-10 04:01:29.264505 : table cards already exists
+2021-06-10 04:01:29.276607 : Loading source files into staging tables
+2021-06-10 04:01:29.291772 : creating fact tables
+2021-06-10 04:01:29.292636 : creating dimension tables
+2021-06-10 04:01:29.293877 : Creat Report
+2021-06-10 04:01:29.294200 : dropping temporary tables
+2021-06-10 04:01:29.294554 : -------------Work completed----------------
+2021-06-10 04:02:08.816691 : -------------Start of work----------------
+Error 2021-06-10 04:02:08.865037 : table cards already exists
+2021-06-10 04:02:08.865194 : Loading source files into staging tables
+2021-06-10 04:02:08.865651 : creating fact tables
+2021-06-10 04:02:08.865803 : creating dimension tables
+2021-06-10 04:02:08.866206 : Creat Report
+2021-06-10 04:02:08.866543 : dropping temporary tables
+2021-06-10 04:02:08.866888 : -------------Work completed----------------
+
+2021-06-10 04:02:13.761777 : -------------Start of work----------------
+Error 2021-06-10 04:02:13.762900 : table cards already exists
+2021-06-10 04:02:13.763021 : Loading source files into staging tables
+2021-06-10 04:02:13.763442 : creating fact tables
+2021-06-10 04:02:13.763684 : creating dimension tables
+2021-06-10 04:02:13.763926 : Creat Report
+2021-06-10 04:02:13.764260 : dropping temporary tables
+2021-06-10 04:02:13.764770 : -------------Work completed----------------
+
+2021-06-10 04:20:10.391604 : -------------Start of work----------------
+Error 2021-06-10 04:20:10.548681 : table cards already exists
+2021-06-10 04:20:10.548865 : Loading source files into staging tables
+2021-06-10 04:20:10.549216 : creating fact tables
+2021-06-10 04:20:10.559053 : creating dimension tables
+2021-06-10 04:20:10.559545 : Creat Report
+2021-06-10 04:20:10.559739 : Dropping temporary tables
+2021-06-10 04:20:10.891015 : -------------Work completed----------------
+
+2021-06-10 04:25:34.775909 : -------------Start of work----------------
+Error 2021-06-10 04:25:34.831064 : table cards already exists
+2021-06-10 04:25:34.831230 : Loading source files into staging tables
+2021-06-10 04:25:34.831601 : creating fact tables
+2021-06-10 04:25:34.831953 : creating dimension tables
+2021-06-10 04:25:34.832265 : Creat Report
+2021-06-10 04:25:34.847563 : Dropping temporary tables
+2021-06-10 04:25:34.847813 : -------------Work completed----------------
+
+2021-06-10 04:39:44.894691 : -------------Start of work----------------
+2021-06-10 04:39:44.957236 : Dropping temporary tables
+Error 2021-06-10 04:39:44.973649 : table cards already exists
+2021-06-10 04:39:44.973816 : Loading source files into staging tables
+2021-06-10 04:39:44.986496 : creating fact tables
+2021-06-10 04:39:44.986622 : creating dimension tables
+2021-06-10 04:39:44.987030 : Creat Report
+Error 2021-06-10 04:39:44.987572 : no such table: stg_transactions
+Error 2021-06-10 04:39:44.987755 : no such table: STG_FRAUD
+2021-06-10 04:39:44.988003 : Dropping temporary tables
+2021-06-10 04:39:44.988399 : -------------Work completed----------------
+
+2021-06-10 04:42:46.125552 : -------------Start of work----------------
+2021-06-10 04:42:46.150562 : Dropping temporary tables
+Error 2021-06-10 04:42:46.176832 : table cards already exists
+2021-06-10 04:42:46.177069 : Loading source files into staging tables
+2021-06-10 04:42:46.177408 : creating fact tables
+2021-06-10 04:42:46.177651 : creating dimension tables
+2021-06-10 04:42:46.178033 : Creat Report
+Error 2021-06-10 04:42:46.178542 : no such table: stg_transactions
+Error 2021-06-10 04:42:46.178703 : no such table: STG_FRAUD
+2021-06-10 04:42:46.179034 : Dropping temporary tables
+2021-06-10 04:42:46.179386 : -------------Work completed----------------
+
+2021-06-10 04:44:43.499421 : -------------Start of work----------------
+2021-06-10 04:44:43.515881 : Dropping temporary tables
+Error 2021-06-10 04:44:43.542089 : table cards already exists
+2021-06-10 04:44:43.542327 : Loading source files into staging tables
+2021-06-10 04:44:44.681926 : creating fact tables
+2021-06-10 04:44:44.682027 : creating dimension tables
+2021-06-10 04:44:44.682293 : Creat Report
+Error 2021-06-10 04:44:44.682760 : no such column: date
+Error 2021-06-10 04:44:44.682882 : no such table: STG_FRAUD
+2021-06-10 04:44:44.683065 : Dropping temporary tables
+2021-06-10 04:44:44.683608 : -------------Work completed----------------
+
