@@ -1,0 +1,11 @@
+2021-06-10 18:04:52.340235 : -------------Start of work----------------
+2021-06-10 18:04:52.370979 : Dropping temporary tables
+2021-06-10 18:04:53.026337 : Loading source files into staging tables
+2021-06-10 18:04:54.336604 : creating fact tables
+2021-06-10 18:04:54.336724 : creating dimension tables
+2021-06-10 18:04:54.343001 : Creat Report
+Error 2021-06-10 18:04:54.345058 : no such column: date
+Error 2021-06-10 18:04:54.345205 : no such table: STG_FRAUD
+2021-06-10 18:04:54.345579 : Dropping temporary tables
+2021-06-10 18:04:54.346010 : -------------Work completed----------------
+

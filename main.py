@@ -15,7 +15,7 @@ from py_scripts.report import insert_rep_fraud
 def main():
     to_log('-------------Start of work----------------')
 
-    path = 'data/'
+    path = './'
     conn = sqlite3.connect('sber.db')
     cursor = conn.cursor()
 

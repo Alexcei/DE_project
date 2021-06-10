@@ -1,5 +1,8 @@
+archive
+passport_*
+terminals_*
+transactions_*
 venv
-data
 .DS_Store
 .idea
 __pycache__

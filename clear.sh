@@ -1,4 +1,4 @@
 #!/bin/sh
 
-rm -rf data log.txt sber.db
-unzip data.zip -d data
+rm -rf archive log.txt sber.db passport* termimals* transactions* data
+unzip data.zip
