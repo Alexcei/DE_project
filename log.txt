@@ -1,0 +1,11 @@
+Error2021-06-10 02:38:30.192429 : table cards already exists
+Error 2021-06-10 02:38:54.864016 : table cards already exists
+Error 2021-06-10 02:39:02.420750 : table cards already exists
+Error 2021-06-10 02:47:22.015287 : table cards already exists
+2021-06-10 02:47:22.028902 : Loading source files into staging tables
+2021-06-10 02:52:05.136022 : -------------Start of work----------------
+Error 2021-06-10 02:52:05.204845 : table cards already exists
+2021-06-10 02:52:05.205090 : Loading source files into staging tables
+2021-06-10 02:55:57.629720 : -------------Start of work----------------
+Error 2021-06-10 02:55:57.666105 : table cards already exists
+2021-06-10 02:55:57.666259 : Loading source files into staging tables
