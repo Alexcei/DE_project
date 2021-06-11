@@ -17,6 +17,43 @@ def create_table_rep_fraud(cursor):
 
 @print_error
 def create_table_stg_fraud(cursor):
+    return cursor.execute('''
+    select DISTINCT
+        tr.trans_date event_dt ,
+        cl.passport_num passport,
+        cl.last_name || ' ' ||  cl.first_name || ' ' || cl.patronymic fio,
+        cl.phone phone,
+        '1' event_type,
+    from stg_transactions tr
+    inner join cards cd
+        ON tr.card_num = trim(cd.card_num) AND tr.trans_date between cd.effective_from AND cd.effective_to
+    ''').fetchall()
+
+
+'''
+-- 1. Совершение операции при просроченном или заблокированном паспорте.
+INSERT INTO DEMIPT.PVVL_REP_FRAUD (EVENT_DT, PASSPORT, FIO, PHONE, EVENT_TYPE, REPORT_DT)
+SELECT DISTINCT
+--    to_char(trans_date, 'YYYY.MM.DD HH24:MI:SS' ),
+    tr.trans_date event_dt ,
+    cl.passport_num passport,
+    cl.last_name || ' ' ||  cl.first_name || ' ' || cl.patronymic fio,
+    cl.phone phone,
+    '1' event_type,
+    sysdate report_dt
+FROM DEMIPT.PVVL_DWH_FCT_TRANSACTIONS tr
+INNER JOIN DEMIPT.PVVL_DWH_DIM_CARDS_HIST cd
+    ON tr.card_num = trim(cd.card_num) AND tr.trans_date between cd.effective_from AND cd.effective_to
+INNER JOIN PVVL_DWH_DIM_ACCOUNTS_HIST ac 
+    ON cd.account = ac.account AND tr.trans_date between ac.effective_from AND ac.effective_to
+INNER JOIN PVVL_DWH_DIM_CLIENTS_HIST cl
+    ON ac.client = cl.client_id AND tr.trans_date between cl.effective_from AND cl.effective_to
+WHERE tr.trans_date > cl.passport_valid_to
+OR cl.PASSPORT_NUM in (select PASSPORT_NUM from DEMIPT.PVVL_DWH_FCT_PSSPRT_BLACKLIST);
+'''
+
+@print_error
+def create_table_stg_fraud_(cursor):
     cursor.execute('''
         create table STG_FRAUD as
             select * from (

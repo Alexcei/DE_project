@@ -11,6 +11,9 @@ from py_scripts.report import create_table_rep_fraud
 from py_scripts.report import create_table_stg_fraud
 from py_scripts.report import insert_rep_fraud
 
+from py_scripts.stg2 import create_transactions_table, insert_transactions
+from py_scripts.stg2 import create_blacklist_table, insert_blacklist
+
 
 def main():
     to_log('-------------Start of work----------------')
@@ -52,4 +55,20 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    #main()
+    path = './'
+    conn = sqlite3.connect('sber.db')
+    cursor = conn.cursor()
+
+    # create_transactions_table(cursor)
+    # insert_transactions(conn)
+
+    create_blacklist_table(cursor)
+    insert_blacklist(conn)
+
+    cursor.close()
+    conn.close()
+    #insert_blacklist(conn)
+    # res = create_table_stg_fraud(cursor)
+    # for line in res:
+    #     print(line)

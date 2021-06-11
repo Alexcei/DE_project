@@ -1,11 +1,43 @@
-2021-06-10 18:04:52.340235 : -------------Start of work----------------
-2021-06-10 18:04:52.370979 : Dropping temporary tables
-2021-06-10 18:04:53.026337 : Loading source files into staging tables
-2021-06-10 18:04:54.336604 : creating fact tables
-2021-06-10 18:04:54.336724 : creating dimension tables
-2021-06-10 18:04:54.343001 : Creat Report
-Error 2021-06-10 18:04:54.345058 : no such column: date
-Error 2021-06-10 18:04:54.345205 : no such table: STG_FRAUD
-2021-06-10 18:04:54.345579 : Dropping temporary tables
-2021-06-10 18:04:54.346010 : -------------Work completed----------------
+2021-06-11 11:59:46.843008 : -------------Start of work----------------
+2021-06-11 11:59:46.864488 : Dropping temporary tables
+2021-06-11 11:59:47.679115 : Loading source files into staging tables
+2021-06-11 11:59:48.592480 : creating fact tables
+2021-06-11 11:59:48.592639 : creating dimension tables
+2021-06-11 11:59:48.592805 : Creat Report
+Error 2021-06-11 11:59:48.594620 : no such column: date
+Error 2021-06-11 11:59:48.594814 : no such table: STG_FRAUD
+2021-06-11 11:59:48.594930 : Dropping temporary tables
+2021-06-11 11:59:48.596263 : -------------Work completed----------------
 
+Error 2021-06-11 13:47:56.867941 : 'sqlite3.Cursor' object has no attribute 'fitchall'
+Error 2021-06-11 19:35:10.820233 : 'sqlite3.Cursor' object has no attribute 'commit'
+Error 2021-06-11 19:35:10.840149 : near ")": syntax error
+Error 2021-06-11 19:37:05.074252 : 'builtin_function_or_method' object has no attribute 'execute'
+Error 2021-06-11 19:37:05.074402 : 'builtin_function_or_method' object has no attribute 'execute'
+Error 2021-06-11 19:38:37.146682 : 'builtin_function_or_method' object has no attribute 'execute'
+Error 2021-06-11 19:39:14.094751 : 'sqlite3.Cursor' object has no attribute 'commit'
+Error 2021-06-11 19:40:28.402939 : 'sqlite3.Cursor' object has no attribute 'commit'
+Error 2021-06-11 19:40:31.324621 : 'sqlite3.Cursor' object has no attribute 'commit'
+Error 2021-06-11 19:40:35.034532 : 'sqlite3.Cursor' object has no attribute 'commit'
+Error 2021-06-11 19:40:40.227648 : 'sqlite3.Cursor' object has no attribute 'commit'
+Error 2021-06-11 19:40:42.116290 : 'sqlite3.Cursor' object has no attribute 'commit'
+Error 2021-06-11 19:40:48.498755 : 'sqlite3.Cursor' object has no attribute 'commit'
+Error 2021-06-11 19:43:05.178783 : 'sqlite3.Cursor' object has no attribute 'commit'
+Error 2021-06-11 19:43:36.213828 : 'sqlite3.Cursor' object has no attribute 'commit'
+Error 2021-06-11 19:45:17.865267 : 'sqlite3.Cursor' object has no attribute 'cursor'
+Error 2021-06-11 19:45:17.873060 : 'sqlite3.Cursor' object has no attribute 'cursor'
+Error 2021-06-11 19:45:17.905896 : 'sqlite3.Cursor' object has no attribute 'cursor'
+Error 2021-06-11 19:46:25.662759 : near ")": syntax error
+Error 2021-06-11 19:46:25.669529 : 'sqlite3.Cursor' object has no attribute 'cursor'
+Error 2021-06-11 19:46:25.670183 : near ")": syntax error
+Error 2021-06-11 19:46:54.557921 : near ")": syntax error
+Error 2021-06-11 19:47:22.172379 : table DWH_DIM_TRANSACTIONS has no column named passport_num
+Error 2021-06-11 19:48:29.660927 : 'sqlite3.Cursor' object has no attribute 'cursor'
+Error 2021-06-11 19:48:29.690295 : near ")": syntax error
+Error 2021-06-11 19:48:48.088695 : 'sqlite3.Cursor' object has no attribute 'cursor'
+Error 2021-06-11 19:48:48.101350 : no such column: passport_num
+Error 2021-06-11 19:49:19.661745 : no such column: passport_num
+Error 2021-06-11 19:49:50.980583 : no such column: entry_dt
+Error 2021-06-11 19:50:02.965773 : 'sqlite3.Cursor' object has no attribute 'commit'
+Error 2021-06-11 19:50:09.693183 : 'sqlite3.Cursor' object has no attribute 'commit'
+Error 2021-06-11 19:50:40.960680 : 'builtin_function_or_method' object has no attribute 'execute'
