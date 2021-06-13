@@ -59,9 +59,17 @@ def update_blacklist(conn):
     conn.commit()
 
 
-del_blacklist(cursor)
-create_blacklist_table(cursor)
-update_blacklist(conn)
+i = 0
+for line in cursor.execute('''select distinct fio from REP_FRAUD;''').fetchall():
+    print(line)
+    i += 1
+
+print(i)
+
+
+# del_blacklist(cursor)
+# create_blacklist_table(cursor)
+# update_blacklist(conn)
 
 # tmp = cursor.execute('''
 # select max(date), passport from stg_blacklist group by passport;

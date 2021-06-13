@@ -1,10 +1,7 @@
-import sqlite3
-
-path = './'
-conn = sqlite3.connect('../sber.db')
-cursor = conn.cursor()
+from py_scripts.utils import print_error
 
 
+@print_error
 def create_terminals_table(cursor):
     cursor.execute('''
         CREATE TABLE if not exists DWH_DIM_TERMINALS (
@@ -17,6 +14,7 @@ def create_terminals_table(cursor):
     ''')
 
 
+@print_error
 def insert_terminals_table(conn):
     conn.cursor().execute('''
         insert into DWH_DIM_TERMINALS (
@@ -33,22 +31,3 @@ def insert_terminals_table(conn):
             from stg_terminals
     ''')
     conn.commit()
-
-
-cursor.execute('drop table if exists DWH_DIM_TERMINALS')
-
-create_terminals_table(cursor)
-insert_terminals_table(conn)
-
-
-def show():
-    return cursor.execute('''
-        select * from DWH_DIM_TERMINALS
-    ''').fetchall()
-
-
-i = 0
-for line in show():
-    i += 1
-
-print(i)

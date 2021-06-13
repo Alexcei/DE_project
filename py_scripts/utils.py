@@ -14,7 +14,6 @@ def print_error(fn):
             return fn(*args, **kwargs)
         except Exception as e:
             to_log(str(e), 'Error ')
-            print('Error:', e)
     return wrapper
 
 
@@ -23,5 +22,3 @@ def dropping_tables(cursor):
     cursor.execute('drop table if exists stg_transactions')
     cursor.execute('drop table if exists stg_blacklist')
     cursor.execute('drop table if exists stg_terminals')
-
-    cursor.execute('drop table if exists STG_FRAUD')

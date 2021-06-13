@@ -34,6 +34,8 @@ def main():
     if not os.path.exists(path + 'archive'):
         os.makedirs(path + 'archive')
 
+
+
     to_log('Loading source files into staging tables')
     txt_to_sql(path, conn, 'transactions', 'stg_transactions')
     xlsx_to_sql(path, conn, 'passport', 'stg_blacklist')
@@ -56,7 +58,7 @@ def main():
     insert_rep_fraud(conn)
 
     to_log('Dropping temporary tables')
-    #dropping_tables(cursor)
+    dropping_tables(cursor)
 
     cursor.close()
     conn.close()
@@ -66,19 +68,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # path = './'
-    # conn = sqlite3.connect('sber.db')
-    # cursor = conn.cursor()
-
-    # create_transactions_table(cursor)
-    # insert_transactions(conn)
-
-    # create_blacklist_table(cursor)
-    # insert_blacklist(conn)
-    #
-    # cursor.close()
-    # conn.close()
-    #insert_blacklist(conn)
-    # res = create_table_stg_fraud(cursor)
-    # for line in res:
-    #     print(line)
