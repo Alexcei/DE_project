@@ -13,6 +13,16 @@ def create_terminals_table(cursor):
         );
     ''')
 
+    cursor.execute('''
+        CREATE VIEW if not exists V_TERMINALS as
+            select
+                terminal_id,
+                terminal_type,
+                terminal_city,
+                terminal_address
+        from DWH_DIM_TERMINALS;
+    ''')
+
 
 @print_error
 def insert_terminals_table(conn):

@@ -1,4 +1,5 @@
 import sqlite3
+from py_scripts.loading import txt_to_sql, xlsx_to_sql
 
 path = './'
 conn = sqlite3.connect('../sber.db')
@@ -31,49 +32,53 @@ def create_blacklist_table(cursor):
     ''')
 
 
-def del_blacklist(cursor):
-    cursor.execute('drop table if exists DWH_DIM_PASSPORT_BLACKLIST_HIST')
-    cursor.execute('drop VIEW if exists V_PASSPORT_BLACKLIST_HIST;')
-
-
-def update_blacklist(conn):
-    cursor = conn.cursor()
-
-    cursor.execute('''
-        replace into DWH_DIM_PASSPORT_BLACKLIST_HIST t1
-        (
-            select
-                passport, 
-                max(date) as entry_dt
-            from stg_blacklist
-            group by passport) t2
-        on t1.passport_num = t2.passport
-        when matched then
-            update
-            set t1.entry_dt = t2.entry_dt
-                t1.update_dt = current_timestamp
-        when not matched then
-            insert (passport_num, entry_dt)
-            values (t2.passport, t2.entry_dt);
-    ''')
-    conn.commit()
-
-
 i = 0
-for line in cursor.execute('''select distinct fio from REP_FRAUD;''').fetchall():
+for line in cursor.execute('''select distinct fio, event_type from REP_FRAUD;''').fetchall():
     print(line)
     i += 1
 
 print(i)
 
+def f():
+    return cursor.execute('''
+        select distinct
+        t1.trans_date,
+        t1.trans_id,
+        t1.card_num,
+        t1.oper_type,
+        t1.oper_result,
+        t1.amt,
+        t5.passport_num,
+        t5.passport_valid_to,
+        t4.valid_to,
+        t4.client,
+        t2.terminal_city,
+        t5.last_name,
+        t5.first_name,
+        t5.patronymic,
+        t5.phone
+        from DWH_DIM_TRANSACTIONS t1
+        left join DWH_DIM_TERMINALS t2 on t1.terminal = t2.terminal_id
+        left join cards t3 on t1.card_num = t3.card_num
+        left join accounts t4 on t3.account = t4.account
+        left join clients t5 on t4.client = t5.client_id
+        where (select strftime('%s', max(trans_date)) from DWH_DIM_TRANSACTIONS) - strftime('%s', trans_date) < 3600 * 24
+''').fetchall()
 
-# del_blacklist(cursor)
-# create_blacklist_table(cursor)
-# update_blacklist(conn)
 
-# tmp = cursor.execute('''
-# select max(date), passport from stg_blacklist group by passport;
-# ''').fetchall()
-#
-# for line in tmp:
+def f_():
+    return cursor.execute('''
+        select 
+            trans_date,
+            (select max(trans_date) from DWH_DIM_TRANSACTIONS) as max_d
+        from DWH_DIM_TRANSACTIONS
+        where (select strftime('%s', max(trans_date)) from DWH_DIM_TRANSACTIONS) - strftime('%s', trans_date) < 3600 * 24
+    ''').fetchall()
+
+
+# i = 0
+# for line in f():
 #     print(line)
+#     i += 1
+#
+# print(i)
