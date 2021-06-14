@@ -98,7 +98,7 @@ def insert_rep_fraud_3(conn):
             left join accounts t4 on t3.account = t4.account
             left join clients t5 on t4.client = t5.client_id
             where (select strftime('%s', max(trans_date)) from DWH_DIM_TRANSACTIONS) -
-                strftime('%s', trans_date) < 3600 * 24 + 60 * 20
+                strftime('%s', trans_date) < 3600 * 25
             )
             insert into REP_FRAUD (
                 event_dt,
@@ -161,7 +161,7 @@ def insert_rep_fraud_4(conn):
             left join accounts t4 on t3.account = t4.account
             left join clients t5 on t4.client = t5.client_id
             where (select strftime('%s', max(trans_date)) from DWH_DIM_TRANSACTIONS) -
-                strftime('%s', trans_date) < 3600 * 25
+                strftime('%s', trans_date) < 3600 * 24 + 60 * 20
             )
             insert into REP_FRAUD (
                 event_dt,

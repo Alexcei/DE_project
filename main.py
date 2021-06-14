@@ -9,7 +9,7 @@ from py_scripts.loading import create_table_accounts_cards_client
 from py_scripts.loading import txt_to_sql, xlsx_to_sql, get_files
 
 from py_scripts.report import create_rep_fraud
-from py_scripts.report import insert_rep_fraud_1_2#, insert_rep_fraud_2
+from py_scripts.report import insert_rep_fraud_1_2
 from py_scripts.report import insert_rep_fraud_3, insert_rep_fraud_4
 
 from py_scripts.backlist import create_passport_blacklist
@@ -65,7 +65,6 @@ def main():
         to_log('Create Report')
         create_rep_fraud(cursor)
         insert_rep_fraud_1_2(conn)
-        #insert_rep_fraud_2(conn)
         insert_rep_fraud_3(conn)
         insert_rep_fraud_4(conn)
 
