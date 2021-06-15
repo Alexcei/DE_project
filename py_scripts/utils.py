@@ -19,6 +19,11 @@ def print_error(fn):
 
 @print_error
 def dropping_tables(cursor):
-    cursor.execute('drop table if exists stg_transactions')
-    cursor.execute('drop table if exists stg_blacklist')
-    cursor.execute('drop table if exists stg_terminals')
+    cursor.execute('drop table if exists stg_transactions;')
+    cursor.execute('drop table if exists stg_blacklist;')
+    cursor.execute('drop table if exists stg_terminals;')
+
+    cursor.execute('drop table if exists stg_terminals;')
+    cursor.execute('drop table if exists terminals_01;')
+    cursor.execute('drop table if exists terminals_02;')
+    cursor.execute('drop table if exists terminals_03;')

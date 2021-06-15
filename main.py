@@ -9,8 +9,7 @@ from py_scripts.loading import create_table_accounts_cards_client
 from py_scripts.loading import txt_to_sql, xlsx_to_sql, get_files
 
 from py_scripts.report import create_rep_fraud
-from py_scripts.report import insert_rep_fraud_1_2
-from py_scripts.report import insert_rep_fraud_3, insert_rep_fraud_4
+from py_scripts.report import insert_rep_fraud
 
 from py_scripts.backlist import create_passport_blacklist
 from py_scripts.backlist import insert_passport_blacklist
@@ -19,7 +18,10 @@ from py_scripts.transactions import create_transactions_table
 from py_scripts.transactions import insert_transactions_table
 
 from py_scripts.terminals import create_terminals_table
-from py_scripts.terminals import insert_terminals_table
+from py_scripts.terminals import create_terminals_new
+from py_scripts.terminals import create_terminals_delete
+from py_scripts.terminals import create_terminals_changed
+from py_scripts.terminals import update_terminals_table
 
 
 def main():
@@ -60,13 +62,14 @@ def main():
 
         to_log('Loading fact terminals')
         create_terminals_table(cursor)
-        insert_terminals_table(conn)
+        create_terminals_new(cursor)
+        create_terminals_delete(cursor)
+        create_terminals_changed(cursor)
+        update_terminals_table(conn)
 
         to_log('Create Report')
         create_rep_fraud(cursor)
-        insert_rep_fraud_1_2(conn)
-        insert_rep_fraud_3(conn)
-        insert_rep_fraud_4(conn)
+        insert_rep_fraud(conn)
 
         to_log('Dropping temporary tables')
         dropping_tables(cursor)

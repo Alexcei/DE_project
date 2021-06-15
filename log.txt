@@ -1,24 +1,24 @@
-2021-06-14 15:59:08.160534 : -------------Start of work----------------
-2021-06-14 15:59:08.707086 : Dropping temporary tables
-2021-06-14 15:59:08.707290 : Loading source files into staging tables
-2021-06-14 15:59:09.165206 : Loading fact blacklist
-2021-06-14 15:59:09.170383 : Loading fact transactions
-2021-06-14 15:59:09.266335 : Loading fact terminals
-2021-06-14 15:59:09.272192 : Create Report
-2021-06-14 15:59:09.752047 : Dropping temporary tables
-2021-06-14 15:59:09.757879 : Dropping temporary tables
-2021-06-14 15:59:09.758101 : Loading source files into staging tables
-2021-06-14 15:59:09.864494 : Loading fact blacklist
-2021-06-14 15:59:09.866980 : Loading fact transactions
-2021-06-14 15:59:09.889917 : Loading fact terminals
-2021-06-14 15:59:09.892554 : Create Report
-2021-06-14 15:59:10.515683 : Dropping temporary tables
-2021-06-14 15:59:10.521417 : Dropping temporary tables
-2021-06-14 15:59:10.521787 : Loading source files into staging tables
-2021-06-14 15:59:10.630759 : Loading fact blacklist
-2021-06-14 15:59:10.633098 : Loading fact transactions
-2021-06-14 15:59:10.659660 : Loading fact terminals
-2021-06-14 15:59:10.662379 : Create Report
-2021-06-14 15:59:11.364802 : Dropping temporary tables
-2021-06-14 15:59:11.370767 : -------------Work completed----------------
+2021-06-15 07:24:31.897191 : -------------Start of work----------------
+2021-06-15 07:24:32.442101 : Dropping temporary tables
+2021-06-15 07:24:32.442424 : Loading source files into staging tables
+2021-06-15 07:24:32.771138 : Loading fact blacklist
+2021-06-15 07:24:32.775728 : Loading fact transactions
+2021-06-15 07:24:32.802312 : Loading fact terminals
+2021-06-15 07:24:32.812842 : Create Report
+2021-06-15 07:24:33.140312 : Dropping temporary tables
+2021-06-15 07:24:33.163245 : Dropping temporary tables
+2021-06-15 07:24:33.163560 : Loading source files into staging tables
+2021-06-15 07:24:33.270969 : Loading fact blacklist
+2021-06-15 07:24:33.273190 : Loading fact transactions
+2021-06-15 07:24:33.296440 : Loading fact terminals
+2021-06-15 07:24:33.305177 : Create Report
+2021-06-15 07:24:33.652108 : Dropping temporary tables
+2021-06-15 07:24:33.661789 : Dropping temporary tables
+2021-06-15 07:24:33.662112 : Loading source files into staging tables
+2021-06-15 07:24:33.889157 : Loading fact blacklist
+2021-06-15 07:24:33.890839 : Loading fact transactions
+2021-06-15 07:24:33.914842 : Loading fact terminals
+2021-06-15 07:24:33.922787 : Create Report
+2021-06-15 07:24:34.288950 : Dropping temporary tables
+2021-06-15 07:24:34.317394 : -------------Work completed----------------
 
